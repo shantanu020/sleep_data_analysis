@@ -1,5 +1,5 @@
 # eda_model_training.py
-
+import joblib
 import pandas as pd
 import numpy as np
 import pickle
@@ -37,6 +37,6 @@ model.fit(X_train, y_train)
 
 # Save model
 with open('model.pkl', 'wb') as file:
-    pickle.dump(model, file)
+    joblib.dump(model, 'model.pkl')
 
 print("✅ Model trained and saved as model.pkl successfully!")

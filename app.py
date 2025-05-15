@@ -1,11 +1,11 @@
 # app.py
 
 import streamlit as st
-import pickle
 import numpy as np
+import joblib
 
-# Load saved model
-model = pickle.load(open('model.pkl', 'rb'))
+# Load
+model = joblib.load('model.pkl')
 
 # Title
 st.title('🛌 Sleep Health - Stress Prediction App')
